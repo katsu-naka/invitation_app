@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  with_options presence: ture do
+  with_options presence: true do
     validates :name
     validates :user_id , uniqueness: true
   end
